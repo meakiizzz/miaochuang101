@@ -524,3 +524,31 @@
 .recharge-grid .pack .pack-bonus,
 .recharge-grid .pack.active .pack-bonus{background:transparent;border-top:0;font-weight:500}
 .recharge-grid .pack .pack-bonus>.bonus-bean{width:12px;height:14px;color:#9573e7}
+
+/* Weekly membership card: warm promotional treatment. */
+.subscription-plans .weekly-plan,.subscription-plans .weekly-plan.selected{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;min-height:151px;padding:22px 24px;border:2px solid #ff8c82;border-radius:23px;background:linear-gradient(115deg,#fff9f6 0%,#fffdfd 52%,#fff0e9 100%);overflow:hidden;box-shadow:none;text-align:left}
+.weekly-plan .weekly-plan-info{display:flex;flex-direction:row;align-items:center;gap:10px;position:relative;z-index:1}
+.weekly-plan-info>strong{font-size:20px;color:#303033;white-space:nowrap}
+.weekly-plan .weekly-offer-label{font-size:13px;line-height:22px;padding:3px 8px;border-radius:5px;background:linear-gradient(100deg,#ff372d,#ff7425);color:white;white-space:nowrap;box-shadow:none}
+.weekly-plan .weekly-plan-pricing{display:flex;flex-direction:row;align-items:baseline;gap:13px;position:relative;z-index:1}
+.weekly-plan .subscription-plan-price{font-size:49px;line-height:1.05;font-weight:800;color:#ff3c2e;letter-spacing:-1.5px;margin:0}
+.weekly-plan .subscription-plan-price small{font-size:22px;color:#ff3c2e;margin-right:4px}
+.weekly-plan .weekly-price-meta .weekly-original-price{font-size:17px;color:#999da3;line-height:1.2}
+.weekly-plan .plan-daily{display:none}
+.weekly-saving-seal{position:absolute;right:-5px;top:-9px;width:115px;height:124px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transform:rotate(15deg);color:#fff8f0;background:linear-gradient(145deg,#ffc4b8,#ffd8bd);clip-path:polygon(50% 0%,61% 5%,73% 3%,81% 13%,92% 18%,94% 30%,100% 41%,96% 53%,99% 66%,89% 75%,84% 87%,71% 90%,61% 99%,49% 95%,36% 100%,26% 92%,13% 89%,10% 76%,1% 66%,5% 53%,0% 40%,7% 29%,8% 17%,21% 12%,31% 3%,43% 5%);font-style:normal;pointer-events:none}
+.weekly-saving-seal b{font-size:24px;line-height:1.1}.weekly-saving-seal>span{font-size:35px;font-weight:750;line-height:1.15;letter-spacing:-1px}.weekly-saving-seal small{font-size:17px;margin-right:3px}.weekly-saving-seal em{font-size:12px;font-style:normal;letter-spacing:5px;margin-top:4px}
+@media(max-width:360px){.subscription-plans .weekly-plan,.subscription-plans .weekly-plan.selected{padding:20px 17px}.weekly-plan-info>strong{font-size:18px}.weekly-plan .weekly-offer-label{font-size:11px}.weekly-saving-seal{width:96px;height:112px;right:-12px}.weekly-plan .subscription-plan-price{font-size:44px}}
+/* Compact weekly offer card. */
+.subscription-plans .weekly-plan,.subscription-plans .weekly-plan.selected{min-height:108px;padding:15px 20px;gap:8px;border-radius:18px}
+.weekly-plan-info>strong{font-size:18px}
+.weekly-plan .weekly-plan-info{gap:8px}
+.weekly-plan .weekly-offer-label{font-size:11px;line-height:18px;padding:2px 7px}
+.weekly-plan .subscription-plan-price{font-size:36px;line-height:1.05;letter-spacing:-1px}
+.weekly-plan .subscription-plan-price small{font-size:17px;margin-right:3px}
+.weekly-plan .weekly-price-meta .weekly-original-price{font-size:13px}
+.weekly-saving-seal{width:88px;height:98px;right:-3px;top:-8px}
+.weekly-saving-seal b{font-size:19px}
+.weekly-saving-seal>span{font-size:27px}
+.weekly-saving-seal small{font-size:13px}
+.weekly-saving-seal em{font-size:9px;letter-spacing:4px;margin-top:2px}
+@media(max-width:360px){.subscription-plans .weekly-plan,.subscription-plans .weekly-plan.selected{min-height:102px;padding:13px 16px;gap:7px}.weekly-plan-info>strong{font-size:16px}.weekly-plan .weekly-offer-label{font-size:10px}.weekly-plan .subscription-plan-price{font-size:33px}.weekly-saving-seal{width:77px;height:89px;right:-7px}}
