@@ -1,0 +1,526 @@
+/* 订阅页 2026-11-09：独立覆盖样式，不影响现有创作页面。 */
+.subscription-page{color:#17191b;background:#fff}
+.subscription-nav{padding:0 18px;height:48px}
+.subscription-nav>span{color:#222;font-size:13px;letter-spacing:1px}
+.subscription-close{background:transparent;color:#222;width:28px}
+.subscription-balance{display:flex;align-items:center;gap:7px;border:1px solid #dedfe1;border-radius:25px;padding:6px 10px;font-size:11px;color:#292c2f}
+.subscription-balance .bean{width:12px;height:15px;color:#1bbebc}
+.subscription-balance span{padding-left:7px;border-left:1px solid #ddd}
+.subscription-scroll{scroll-behavior:smooth;scrollbar-width:none}
+.subscription-showcase{height:235px;margin:0 12px;border-radius:17px;background:#101718;isolation:isolate}
+.subscription-hero-image,.subscription-showcase video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.subscription-showcase video[hidden]{display:none}
+.subscription-showcase:after{background:linear-gradient(0deg,#00191be6,transparent 75%);z-index:1}
+.subscription-example{font-size:8px;top:12px;right:12px;border-color:#ffffff40;background:#0005;z-index:3}
+.subscription-hero-copy{top:auto;bottom:24px;left:20px;width:85%;z-index:2}
+.subscription-eyebrow{font-size:8px;letter-spacing:2px;color:#c3f6ee}
+.subscription-hero-copy h1{font-size:29px;margin:8px 0 5px;color:#fff;letter-spacing:1px}
+.subscription-hero-copy p{color:#e1ebea;font-size:11px}
+.showcase-sound{position:absolute;right:13px;bottom:21px;z-index:3;font-size:9px;color:#fff;background:#ffffff25;backdrop-filter:blur(10px);border:1px solid #ffffff40;border-radius:20px;padding:6px 9px}
+.showcase-play{position:absolute;left:46%;top:40%;z-index:4;background:#0007;color:#fff;border-radius:50%;width:40px;height:40px}
+.showcase-play[hidden]{display:none}
+.showcase-track{position:absolute;bottom:0;height:3px;left:0;right:0;background:#ffffff30;z-index:3}
+.showcase-track i{display:block;height:100%;background:#35e1d2;width:0}
+.placeholder-motion{animation:placeholder-pan 6s linear both}
+@keyframes placeholder-pan{from{transform:scale(1.02)}to{transform:scale(1.12) translateY(-1%)}}
+.subscription-feature-tabs{display:flex;overflow-x:auto;scrollbar-width:none;gap:8px;padding:13px 16px 6px}
+.subscription-feature-tabs button{width:65px;flex:0 0 65px;gap:7px;padding:10px 2px;background:#f6f7f7;border-radius:12px;border:1px solid #eee;color:#737c7b;font-size:10px;position:relative}
+.subscription-feature-tabs button svg{width:23px;height:23px}
+.subscription-feature-tabs button.active{background:#ecfbf9;border-color:#29bfb8;color:#138a85}
+.subscription-body{padding:20px 0 18px}
+.subscription-heading{padding:0 22px}
+.subscription-kicker{font-size:9px;letter-spacing:2px;color:#999}
+.subscription-heading h2{font-size:29px;line-height:1.45;letter-spacing:-1px;color:#16191b;margin:7px 0}
+.subscription-heading h2 em{color:#14aaa6;font-weight:850}
+.subscription-heading h2 em:after{display:none}
+.subscription-heading h2 span{font-size:23px;letter-spacing:0}
+.subscription-heading p{font-size:10px;color:#939898;margin:5px 0 19px}
+.subscription-plans{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 22px}
+.subscription-plan{position:relative;display:flex;align-items:center;flex-direction:column;border:1px solid #dce0df;background:#fff;border-radius:14px;padding:24px 10px 16px;box-shadow:none;color:#1b2120;text-align:center}
+.subscription-plan.selected{border:2px solid #19c1bd;background:linear-gradient(145deg,#f6fffe,#fff);padding:23px 9px 15px;box-shadow:0 5px 15px #19b9ad0a}
+.subscription-plan>strong{font-size:16px}
+.plan-badge{position:absolute;top:-1px;left:-1px;background:#edf0ef;border-radius:13px 0 10px 0;padding:3px 9px;font-size:8px;color:#727a78}
+.selected .plan-badge{background:#1bb9b3;color:white}
+.subscription-plan-price{font-size:35px;color:#121817;margin:9px 0 0;line-height:1.25;font-weight:750;letter-spacing:-1px}
+.subscription-plan-price small{font-size:20px;color:inherit;margin-right:1px}
+.subscription-plan del{font-size:11px;color:#a6aaa8;margin-top:3px}
+.plan-daily{font-size:10px;color:#939a97;margin-top:7px}
+.plan-gift{font-size:10px;color:#537a73;background:#eff8f5;border-radius:5px;padding:5px 7px;margin-top:10px}
+.plan-radio{position:absolute;right:8px;bottom:8px;border:1px solid #ddd;border-radius:50%;width:14px;height:14px;color:white}
+.selected .plan-radio{background:#18b7b0;border-color:#18b7b0}
+.plan-radio svg{width:11px;height:11px;display:block}
+.subscription-charge-note{font-size:10px;text-align:center;color:#929894;margin:11px 14px 20px;line-height:1.6}
+.subscription-rights{padding:20px;background:#101515;color:#fff}
+.subscription-section-heading{margin:0 0 22px;gap:6px}
+.subscription-section-heading h3{font-size:15px;color:#fff;letter-spacing:0}
+.subscription-section-heading h3 em{font-style:normal;color:#37dcd1}
+.rights-compare{font-size:10px;white-space:nowrap;color:#aab5b3;padding:0}
+.confirmed-perks{display:grid;grid-template-columns:1fr 1fr;gap:24px 10px;text-align:center}
+.confirmed-perks>div{display:flex;flex-direction:column;align-items:center;gap:7px}
+.confirmed-perks svg{width:26px;height:26px;color:#44dacc;stroke-width:1.5}
+.confirmed-perks strong{font-size:12px;font-weight:500}
+.confirmed-perks small{font-size:10px;color:#8c9e99}
+.subscription-rights>p{font-size:9px;color:#83938e;text-align:center;margin-top:22px}
+.subscription-explanation{padding:17px 22px 0}
+.subscription-explanation h3{color:#656e6a}
+.subscription-explanation p{color:#9bA29e}
+.subscription-terms-link{color:#68847c}
+.subscription-page>.page-foot{padding:10px 19px 14px;border-top:1px solid #edf0ee;box-shadow:0 -8px 20px #172e2208;text-align:center;z-index:3}
+.subscription-social{display:inline-flex;align-items:center;gap:4px;color:#68706d;font-size:10px;margin-bottom:9px}
+.subscription-social b{color:#188e87}
+.social-avatars{font-size:11px;letter-spacing:-2px;color:#4f8f85;background:#e5f2ef;border-radius:15px;padding:3px 6px;margin-right:3px}
+.subscription-buy{width:100%;border-radius:9px;min-height:45px;background:#141b1a;color:#fff;box-shadow:none;font-size:17px;font-weight:600;letter-spacing:2px}
+.subscription-buy:disabled{background:#e6eae8;color:#8b9690}
+.subscription-agreement{display:flex;align-items:flex-start;gap:5px;text-align:left;justify-content:center;margin:10px 0 6px;font-size:9px;line-height:1.7;color:#a0a6a2}
+.subscription-agreement input{margin:2px 0 0;accent-color:#1ba69e;width:13px;height:13px;flex-shrink:0}
+.subscription-agreement button{padding:0;font-size:inherit;color:#7d8882}
+.subscription-restore{padding:2px 8px;color:#333c37;font-size:11px;text-decoration:underline;text-underline-offset:3px}
+.subscription-member-status{background:#edf9f5;margin:0 22px 16px;padding:12px;border-radius:10px;display:flex;flex-direction:column;gap:6px;color:#347b68;font-size:11px}
+.subscription-member-status strong{font-size:14px}
+.subscription-member-status small{font-size:9px;color:#7c9389}
+.subscription-comparison{width:100%;border-collapse:collapse;font-size:10px;line-height:1.7}
+.subscription-comparison th,.subscription-comparison td{padding:12px 3px;border-bottom:1px solid #eee;text-align:center}
+.subscription-comparison th{color:#288f83;background:#f1faf7}
+.subscription-comparison td:first-child{text-align:left;font-weight:600;white-space:nowrap}
+.guest-recharge{display:flex;flex-direction:column;align-items:center;gap:16px;padding:35px 10px;text-align:center}
+.guest-recharge>span{background:#eaf9f4;border-radius:20px;padding:20px;color:#259c8d}
+.guest-recharge h3{font-size:21px}
+.guest-recharge p{color:#94a299;line-height:1.9;font-size:13px}
+.guest-recharge .primary{width:100%;margin-top:25px;background:#151e1b}
+.guest-recharge small{color:#aaa;font-size:10px}
+@media(max-width:380px){.subscription-heading h2{font-size:26px}.subscription-heading h2 span{font-size:21px}.subscription-plans{padding:0 16px}.subscription-section-heading h3{font-size:13px}}
+
+/* 本轮视觉调整：沿用品牌紫；紧凑标题；四列权益；头像依次冒出。 */
+.subscription-page{--sub-accent:var(--purple,#6554dc)}
+.subscription-balance .bean{color:var(--sub-accent)}
+.subscription-showcase:after{background:linear-gradient(0deg,#201633e6,transparent 75%)}
+.subscription-eyebrow{color:#e1d7ff}
+.showcase-track i{background:#ad98ff}
+.subscription-feature-tabs button.active{background:var(--lavender);border-color:#ad9aef;color:var(--sub-accent)}
+.subscription-body{padding-top:12px}
+.subscription-heading{padding:0 22px 12px}
+.subscription-title-main{display:flex;align-items:center;justify-content:space-between;gap:9px;border-bottom:1px solid #eee9f6;padding-bottom:9px}
+.subscription-heading h2{margin:0;font-size:25px;line-height:1.15;letter-spacing:.5px;color:#3e2b61;font-weight:850;white-space:nowrap}
+.subscription-heading h2 span{display:block;font-size:12px;font-weight:600;line-height:1.5;letter-spacing:1px;margin-top:5px;color:#8b7aa4}
+.subscription-title-count{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0;padding-left:13px;border-left:1px solid #e6ddf6}
+.subscription-title-count em{font-style:italic;font-size:31px;line-height:1;font-weight:850;letter-spacing:-1px;background:linear-gradient(100deg,#9471eb,#5842c9);background-clip:text;-webkit-background-clip:text;color:transparent}
+.subscription-title-count>span{font-size:10px;color:#8873a6;margin-top:4px}
+.subscription-heading p{margin:7px 0 0;font-size:9px;color:#a296af}
+.subscription-plan.selected{border-color:var(--sub-accent);background:linear-gradient(145deg,#f2edff,#fff);box-shadow:0 5px 15px #6554dc0c}
+.selected .plan-badge,.selected .plan-radio{background:var(--sub-accent);border-color:var(--sub-accent)}
+.subscription-plan{padding-bottom:19px}
+.subscription-plan.selected{padding-bottom:18px}
+.subscription-charge-note{text-align:left;margin:9px 22px 15px;color:#9e93aa;font-size:10px;line-height:1.65}
+.subscription-rights{background:#15111d;padding:17px 16px}
+.subscription-section-heading{margin-bottom:19px}
+.subscription-section-heading h3 em{color:#bd9aff}
+.rights-compare{color:#b5a7c4}
+.confirmed-perks{grid-template-columns:repeat(4,minmax(0,1fr));gap:23px 5px}
+.confirmed-perks>div{min-width:0;gap:7px}
+.confirmed-perks svg{width:25px;height:25px;color:#b29aef}
+.confirmed-perks strong{font-size:10px;font-weight:500;white-space:nowrap;letter-spacing:-.2px}
+.confirmed-perks small{font-size:9px;color:#968aa5;white-space:nowrap}
+.confirmed-perks>div:first-child svg{color:#d4b6ff}
+.confirmed-perks>div:first-child small{color:#cfb5ff;font-weight:650}
+.subscription-rights>p{margin-top:11px;color:#887c97}
+.subscription-all-perks{display:flex;justify-content:center;align-items:center;gap:4px;width:100%;border-top:1px solid #ffffff13;padding:12px 0 0;margin-top:19px;font-size:10px;color:#b3a1ca}
+.subscription-all-perks svg{width:12px;height:12px}
+.subscription-buy{background:linear-gradient(100deg,#795cde,#614ad3);box-shadow:0 4px 13px #684bce20}
+.subscription-social{height:32px;gap:7px;margin-bottom:8px;color:#7c6e90;font-size:10px;white-space:nowrap}
+.subscription-social b{color:var(--sub-accent)}
+.social-avatars{position:relative;display:inline-block;flex:0 0 71px;width:71px;height:30px;margin:0;padding:0;background:none;letter-spacing:normal}
+.social-avatars i{position:absolute;top:0;left:0;width:30px;height:30px;border:2px solid #fff;border-radius:50%;background-image:url('assets/creator-avatars.png');background-size:86px 35px;background-position:-3px -3px;box-shadow:0 1px 4px #35204c30;animation:creator-arrival 3.6s cubic-bezier(.2,.8,.25,1) infinite both}
+.social-avatars i:nth-child(2){left:21px;background-position:-28px -3px;animation-delay:.55s;z-index:2}
+.social-avatars i:nth-child(3){left:42px;background-position:-53px -3px;animation-delay:1.1s;z-index:3}
+@keyframes creator-arrival{0%{opacity:0;transform:translateY(9px) scale(.45)}14%{opacity:1;transform:translateY(-2px) scale(1.08)}23%,76%{opacity:1;transform:translateY(0) scale(1)}91%,100%{opacity:0;transform:translateY(-6px) scale(.85)}}
+.subscription-agreement input{accent-color:var(--sub-accent)}
+.subscription-member-status{background:#f3eefe;color:#68518f}
+.subscription-comparison th{background:#f3eefe;color:var(--purple)}
+.subscription-terms-link{color:#8870a3}
+.guest-recharge>span{background:#f2ecff;color:var(--purple)}
+.guest-recharge .primary{background:var(--purple)}
+.subscription-perks-page .scroll{background:#15111d;color:white}
+.all-perks-intro{padding:25px 21px 27px;background:linear-gradient(135deg,#382651,#15111d)}
+.all-perks-intro h2{font-size:23px;color:#e0caff;letter-spacing:-.5px}
+.all-perks-intro p{font-size:12px;color:#b5a3c9;margin-top:8px}
+.subscription-perks-page .confirmed-perks{padding:24px 15px;row-gap:30px}
+.all-perks-note{padding:15px 22px 30px;color:#968aa5;line-height:1.9;font-size:10px;text-align:center}
+@media(prefers-reduced-motion:reduce){.social-avatars i{animation:none;opacity:1}.placeholder-motion{animation:none}}
+@media(max-width:380px){.subscription-heading h2{font-size:23px}.subscription-heading h2 span{font-size:11px}.subscription-title-count em{font-size:28px}.confirmed-perks strong{font-size:9px}.subscription-social{font-size:9px}}
+
+/* 通栏沉浸展示：导航叠在画面上，画面柔和过渡到页面。 */
+.subscription-page{position:relative}
+.subscription-nav{position:absolute;top:0;left:0;right:0;height:49px;z-index:5;background:linear-gradient(#1710218c,transparent)}
+.subscription-nav>span,.subscription-close{color:#fff}
+.subscription-balance{background:#ffffffed;border-color:#ffffff70;backdrop-filter:blur(12px)}
+.subscription-showcase{height:285px;margin:0;border-radius:0;box-shadow:none;background:#20192c}
+.subscription-showcase:after{background:linear-gradient(180deg,#100b2026 0%,transparent 30%,#20152c99 64%,#291c3e7a 80%,#fff 100%)}
+.subscription-hero-copy{left:22px;bottom:43px;width:calc(100% - 76px)}
+.subscription-hero-copy h1{margin:8px 0 6px;font-size:28px}
+.subscription-hero-copy p{width:100%;font-size:11px;line-height:1.7;color:#fff;text-shadow:0 1px 5px #1b102e55}
+.subscription-example{top:57px;right:15px;font-size:8px;opacity:.65}
+.showcase-sound{right:15px;bottom:46px;width:32px;height:32px;padding:7px;display:grid;place-items:center;border-radius:50%;background:#20182b55;border:1px solid #ffffff60}
+.showcase-sound svg{width:18px;height:18px}
+.showcase-track{left:22px;right:22px;bottom:17px;height:2px;background:#6554dc16}
+.showcase-track i{background:#a58ee0}
+.subscription-feature-tabs{padding-top:0;background:#fff}
+.confirmed-perks>div{position:relative}
+.perk-note{display:block;color:#ab9abb;font-size:8px;line-height:1.4;letter-spacing:-.3px;white-space:nowrap;margin-top:-3px}
+.subscription-rights .confirmed-perks,.subscription-perks-page .confirmed-perks{row-gap:25px}
+.work-retention-notice{display:flex;align-items:center;gap:5px;margin:10px 20px 4px;color:#a39aaf;font-size:10px;line-height:1.7;white-space:nowrap}
+.work-retention-notice svg{width:13px;height:13px;flex-shrink:0}
+.work-retention-notice strong{color:var(--purple,#6554dc);font-weight:600}
+.confirmed-perks .subscription-gift-perk strong{font-size:8.5px;letter-spacing:-.35px;color:#fff}
+.confirmed-perks .subscription-gift-perk small{font-size:8px;letter-spacing:-.3px;color:#968aa5;font-weight:400}
+.subscription-showcase{height:310px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.showcase-dots{position:absolute;z-index:3;bottom:9px;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center}
+.showcase-dot{width:15px;height:21px;padding:0;display:grid;place-items:center;background:transparent}
+.showcase-dot:before{content:"";display:block;width:4px;height:4px;border-radius:50%;background:#c8bedb;transition:background .2s,transform .2s}
+.showcase-dot.active:before{background:var(--purple,#6554dc);transform:scale(1.45)}
+.subscription-plans .subscription-plan{padding:20px 10px 13px}
+.subscription-plans .subscription-plan.selected{padding:19px 9px 12px}
+.subscription-plan>strong{font-size:15px}
+.subscription-plan-price{font-size:31px;margin:6px 0 0}
+.subscription-plan-price small{font-size:18px}
+.plan-daily{margin-top:4px;font-size:9px}
+.subscription-plans .plan-badge{top:-1px;left:-1px;z-index:1;padding:5px 12px;font-size:11px;font-weight:700;line-height:1.2;letter-spacing:.3px;color:#fff;background:linear-gradient(110deg,#8d69e8,#6554dc);border-radius:13px 0 12px 0;box-shadow:0 3px 8px #6554dc25}
+.subscription-plans .selected .plan-badge{background:linear-gradient(110deg,#7651da,#5140bc)}
+.subscription-plans .subscription-plan{padding-top:29px}
+.subscription-plans .subscription-plan.selected{padding-top:28px}
+.subscription-reviews{margin:18px 18px 0;padding:15px 14px 9px;border-radius:13px;background:linear-gradient(125deg,#f6f1ff,#fbf8ff);border:1px solid #f0e8fc}
+.subscription-review-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}
+.subscription-review-heading h3{font-size:13px;color:#4b3b63;position:relative;padding-left:10px}
+.subscription-review-heading h3:before{content:"";position:absolute;left:0;top:2px;width:3px;height:13px;border-radius:3px;background:#a48ae8}
+.subscription-review-heading>span{font-size:8px;color:#b3a5c4}
+.subscription-review-person{display:flex;align-items:center;gap:7px}
+.subscription-review-person img{width:25px;height:25px;object-fit:cover;border-radius:50%}
+.subscription-review-person strong{font-size:11px;color:#665477}
+.subscription-review-stars{margin-left:auto;color:#edb341;font-size:16px;letter-spacing:1px}
+.subscription-review-text{font-size:11px;color:#81728e;line-height:1.85;margin:10px 0 0}
+.subscription-review-controls{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:3px}
+.subscription-review-controls>span{font-size:9px;font-variant-numeric:tabular-nums;color:#b3a4c5;min-width:33px;text-align:center}
+.review-arrow{width:25px;height:24px;color:#ad98c9;display:grid;place-items:center}
+.review-arrow svg{width:12px;height:12px}
+.subscription-review-member{flex-shrink:0;font-size:8px;font-weight:650;line-height:1.4;color:#90631d;background:linear-gradient(110deg,#fff0c7,#ecd09a);border:1px solid #dcb77a80;padding:2px 5px;border-radius:4px;white-space:nowrap}
+.subscription-reviews{padding-bottom:13px}
+.subscription-review-stars{font-size:14px;letter-spacing:0}
+#subscription-review-card{position:relative;height:96px;overflow:hidden}
+.subscription-review-slide{position:absolute;inset:0}
+.review-slide-out{animation:subscription-review-up-out .45s ease-in-out both}
+.review-slide-in{animation:subscription-review-up-in .45s ease-in-out both}
+@keyframes subscription-review-up-out{from{transform:translateY(0)}to{transform:translateY(-100%)}}
+@keyframes subscription-review-up-in{from{transform:translateY(100%)}to{transform:translateY(0)}}
+@media(max-width:380px){#subscription-review-card{height:116px}}
+@media(prefers-reduced-motion:reduce){.review-slide-out,.review-slide-in{animation-duration:.01ms}}
+.subscription-charge-note{text-align:center}
+.subscription-rights{margin:18px 18px 0;padding:17px 14px;border-radius:13px;background:linear-gradient(125deg,#f6f1ff,#fbf8ff);color:#403450;border:1px solid #f0e8fc}
+.subscription-rights .subscription-section-heading h3{color:#403450}
+.subscription-rights .subscription-section-heading h3 em{color:#7052cc}
+.subscription-rights .rights-compare,.subscription-rights .subscription-all-perks{color:#8067a2}
+.subscription-rights .subscription-all-perks{border-top-color:#dfd4ef}
+.subscription-rights .confirmed-perks svg,.subscription-rights .confirmed-perks>div:first-child svg{color:#8a6ccd}
+.subscription-rights .confirmed-perks small,.subscription-rights>p{color:#9586a6}
+.subscription-rights .confirmed-perks>div:first-child small{color:#8964b8}
+.subscription-rights .confirmed-perks .subscription-gift-perk strong{color:#403450}
+.bean-rules-content{padding:22px 22px 35px;color:#776d82;font-size:12px;line-height:1.9}
+.bean-rules-content section+section{margin-top:23px}
+.bean-rules-content h3{font-size:14px;color:#42364f;margin:0 0 9px;font-weight:650}
+.bean-rules-content p{margin:0 0 10px}
+.bean-rules-content .bean-rules-charge-notice{color:#E00E0E}
+.bean-rules-content table{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:14px;font-size:10px;line-height:1.8}
+.bean-rules-content th,.bean-rules-content td{border:1px solid #e4ddec;padding:10px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.bean-rules-content th{background:#f5f1fc;color:#655276;font-weight:600}
+.bean-rules-content th:first-child{width:23%}
+.bean-rules-rates{display:flex;align-items:center;gap:4px;color:#7959b5;padding:4px 0;font-size:12px}
+.bean-rules-rates svg{width:13px;height:13px}
+.usage-intro{padding:14px;background:#f7f3fc;border-radius:12px;color:#856f9f;font-size:11px;line-height:1.8}
+.usage-intro strong{display:block;font-size:12px;color:#67517d}
+.usage-intro p{margin:0}
+.usage-group-title{font-size:14px;color:#42364f;margin:24px 0 12px}
+.usage-card{border:1px solid #eae2f4;border-radius:12px;overflow:hidden;margin-bottom:13px}
+.usage-card header{padding:12px;background:#faf7ff}
+.usage-card header h3{font-size:13px;color:#44364f;margin:0 0 4px}
+.usage-card header span{font-size:10px;color:#a08db2}
+.usage-card table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:11px;text-align:center}
+.usage-card th,.usage-card td{padding:11px 3px;border-top:1px solid #eee7f6}
+.usage-card th{font-size:10px;font-weight:500;color:#92809f}
+.usage-card td{color:#7657b0;font-weight:600}
+.usage-card .usage-pending{color:#b1a7bb;font-size:10px;font-weight:400}
+.usage-fixed .rate-row{padding-left:0;padding-right:0}
+.usage-page .rate-row>span{font-size:11px;white-space:nowrap}
+.recharge-drawer .handle{margin-bottom:16px}
+.recharge-drawer .drawer-header{position:absolute;top:20px;right:16px;margin:0;z-index:1}
+.recharge-drawer .recharge-shortfall{background:none;border-radius:0;padding:0 28px 0 0;margin:4px 0 16px;color:#8c7c9c}
+.recharge-drawer .recharge-shortfall h3{font-size:21px;line-height:1.4;color:#392d49;margin:0 0 7px;font-weight:700}
+.recharge-drawer .recharge-shortfall p{font-size:12px;line-height:1.7;margin:0}
+.recharge-drawer .recharge-shortfall strong{font-size:14px;color:#7553ce;font-weight:700}
+.recharge-drawer .recharge-balance{justify-content:flex-start;gap:8px;margin:0 0 17px;padding:10px 12px;border-radius:10px;background:#f8f5fc}
+.recharge-drawer .recharge-balance>span{font-size:11px;gap:5px;color:#9584a4}
+.recharge-drawer .recharge-balance>span svg{width:16px;height:16px}
+.recharge-drawer .recharge-balance>strong{font-size:16px;color:#68527e}
+.recharge-drawer .recharge-grid{margin-top:0;gap:10px}
+.recharge-drawer .recharge-grid .pack{height:116px}
+.subscription-benefits-entry{padding:0 22px 15px;display:flex;justify-content:flex-end}
+.subscription-benefits-link{display:flex;align-items:center;gap:3px;padding:5px 0;color:#8067a2;font-size:11px}
+.subscription-benefits-link svg{width:13px;height:13px}
+.benefits-detail-page .scroll{background:#f7f5fb}
+.benefits-detail-content{padding:8px 17px 28px}
+.benefits-group{margin:20px 0 25px}
+.benefits-group>h3{font-size:12px;font-weight:500;color:#8e819e;margin:0 0 13px}
+.benefits-table-wrap{border-radius:14px;overflow:hidden;border:1px solid #ece6f4;background:#fff}
+.benefits-group table{border-collapse:collapse;table-layout:fixed;width:100%;text-align:center;font-size:11px}
+.benefits-group th,.benefits-group td{padding:15px 6px;font-weight:400}
+.benefits-group thead th{color:#8866b4;background:#fcfaff;font-size:12px}
+.benefits-group th:first-child{width:39%}
+.benefits-group th:nth-child(2){width:27%}
+.benefits-group tbody th{color:#776a86}
+.benefits-group tbody td{color:#9d91aa;font-size:10px}
+.benefits-group tbody tr:nth-child(odd){background:#faf8fd}
+.benefits-group tr>:last-child{background:#efe8fc;color:#7953b6}
+.benefits-group thead th:last-child{font-size:14px;font-weight:750;font-style:italic;white-space:nowrap}
+.benefits-group thead svg{width:15px;height:15px;vertical-align:-2px}
+.benefit-yes,.benefit-no{display:inline-flex;align-items:center;justify-content:center}
+.benefit-yes{color:#8660c5}
+.benefit-no{color:#b4a9bf}
+.benefit-yes svg,.benefit-no svg{width:16px;height:16px}
+.benefits-detail-note{font-size:10px;line-height:1.9;color:#a194af;margin:0 3px}
+.subscription-perk .subscription-hot{position:absolute;top:-5px;left:calc(50% + 6px);border-radius:4px 4px 4px 0;background:#ff735f;color:white;font-size:7px;line-height:12px;padding:0 4px;font-style:normal;font-weight:700;letter-spacing:.2px}
+.newcomer-page{background:#fff;overflow:hidden;position:relative;display:flex;flex-direction:column}
+.newcomer-media{position:relative;flex:1;min-height:180px;overflow:hidden;background:#eee8fa}
+.newcomer-media>img,.campaign-media>img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.newcomer-media-shade,.campaign-media-shade{position:absolute;inset:0;background:linear-gradient(180deg,#20152c26,transparent 40%,#3f2b5733 70%,#fff)}
+.newcomer-nav{position:absolute;top:16px;left:20px;right:20px;display:flex;align-items:center;justify-content:space-between}
+.newcomer-nav button{background:#ffffffdb;border-radius:20px;padding:7px 12px;font-size:11px;color:#715986}
+.newcomer-nav svg{width:16px;height:16px;display:block}
+.newcomer-tag{position:absolute;bottom:25px;left:25px;color:#fff;background:#6546b77a;backdrop-filter:blur(8px);border:1px solid #ffffff60;padding:6px 11px;font-size:11px;border-radius:20px}
+.newcomer-copy{flex-shrink:0;padding:10px 26px 26px;text-align:center;background:#fff}
+.newcomer-dots{display:flex;gap:6px;justify-content:center;margin:0 0 22px}
+.newcomer-dots i{width:5px;height:5px;background:#ded6ee;border-radius:4px}
+.newcomer-dots i.active{width:19px;background:#7858d2}
+.newcomer-copy h1{font-size:24px;line-height:1.45;color:#38274e;letter-spacing:-.6px;margin:0 0 12px}
+.newcomer-copy p{font-size:12px;line-height:1.85;color:#9a8ca7;margin:0 0 25px}
+.newcomer-copy .primary{width:100%;display:flex;align-items:center;justify-content:center;gap:5px;border-radius:14px}
+.newcomer-copy .primary svg{width:17px;height:17px}
+.newcomer-copy>small{font-size:9px;color:#b8adbf;display:block;margin-top:12px}
+.newcomer-mosaic{position:absolute;inset:62px 25px 30px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.newcomer-mosaic>div{position:relative;overflow:hidden;border-radius:15px;box-shadow:0 6px 20px #24163322}
+.newcomer-mosaic img{width:100%;height:100%;object-fit:cover}
+.newcomer-mosaic span{position:absolute;bottom:0;left:0;right:0;padding:15px 8px 8px;background:linear-gradient(transparent,#2e1a4bba);font-size:11px;color:white;text-align:center}
+.newcomer-mosaic~.newcomer-tag{display:none}
+.campaign-subscribe-page{display:block;background:white;overflow:auto;position:relative}
+.campaign-media{position:relative;height:340px;background:#eee8fa}
+.campaign-close{position:absolute;top:15px;left:16px;width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:#ffffffc9;color:#735d8a;z-index:2}
+.campaign-close svg{width:15px;height:15px}
+.campaign-process{position:absolute;bottom:38px;left:24px;right:24px;display:flex;flex-direction:column;align-items:center;gap:7px;color:white;font-size:11px}
+.campaign-process span{padding:8px 15px;border:1px solid #ffffff66;border-radius:10px;background:#30213f66;backdrop-filter:blur(6px)}
+.campaign-process i{font-style:normal;color:#e8d9ff}
+.campaign-process strong{font-size:15px;text-shadow:0 2px 8px #39264e}
+.campaign-offer{text-align:center;position:relative;padding:0 22px 25px;margin-top:-5px}
+.campaign-social{display:flex;justify-content:center;align-items:center;gap:7px;font-size:9px;color:#9b8aab;margin-bottom:13px}
+.campaign-social .social-avatars{transform:scale(.75);transform-origin:right center;margin-left:-18px}
+.campaign-offer h1{font-size:22px;color:#3f2d54;line-height:1.4;margin:0 0 7px}
+.campaign-subtitle{font-size:11px;line-height:1.8;color:#9987a9;margin:0 0 15px}
+.campaign-price{display:flex;justify-content:center;align-items:center;gap:9px;margin:0 0 8px;color:#62429c}
+.campaign-price strong{font-size:23px;letter-spacing:-.5px}
+.campaign-price span{font-size:10px;border:1px solid #e1d6f2;border-radius:4px;padding:3px 6px}
+.campaign-renewal{font-size:10px;color:#89729d;line-height:1.8;margin:0 0 5px}
+.campaign-usage{font-size:9px;line-height:1.7;color:#b1a2bb;margin:0 0 15px}
+.campaign-offer>.primary{width:100%;border-radius:13px;font-size:16px}
+.campaign-offer .subscription-agreement{margin:12px 0 8px;font-size:9px;line-height:1.7}
+.campaign-offer .subscription-restore{font-size:11px}
+@media(max-height:760px){.campaign-media{height:270px}.newcomer-copy{padding-bottom:18px}.newcomer-copy h1{font-size:22px}.newcomer-copy p{margin-bottom:18px}.newcomer-dots{margin-bottom:14px}}
+/* Newcomer layout follows the supplied wireframe; titles and CTA are preserved. */
+.newcomer-copy{padding:18px 12px 76px}
+.newcomer-copy h1{font-size:22px;line-height:1.4;margin:0 0 6px;letter-spacing:0;color:#171719}
+.newcomer-copy p{font-size:12px;line-height:1.65;margin:0 0 22px;color:#555;min-height:40px}
+.newcomer-copy .primary{width:62%;margin:auto;border-radius:4px;background:#080808;min-height:44px;padding:12px}
+.campaign-subscribe-page{display:flex;flex-direction:column}
+.campaign-media{height:auto;flex:1;min-height:250px;overflow:hidden}
+.campaign-offer{flex-shrink:0;padding:12px 12px 21px;margin:0}
+.campaign-offer h1{font-size:20px;line-height:1.45;margin:0 0 4px;color:#171719;letter-spacing:-.5px}
+.campaign-subtitle{font-size:12px;margin:0 0 24px;color:#555}
+.campaign-offer>.primary{display:block;width:62%;margin:auto;background:#080808;border-radius:4px;min-height:44px;padding:12px}
+.campaign-offer .subscription-agreement{margin:10px 0 10px;text-align:left;color:#a19ba7;font-size:8px;line-height:1.7}
+.campaign-social{margin-bottom:8px}
+@media(max-height:760px){.newcomer-copy{padding-bottom:45px}.campaign-media{min-height:190px}}
+/* Full-bleed media fades behind the copy, without a separate content panel. */
+.newcomer-page,.campaign-subscribe-page{position:relative;isolation:isolate;min-height:0}
+.newcomer-media,.campaign-media{position:absolute;inset:0;height:100%;min-height:0;z-index:0;overflow:hidden}
+.newcomer-media>img,.campaign-media>img{object-position:center 28%}
+.newcomer-media:after,.campaign-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 32%,#ffffff08 43%,#ffffff70 57%,#ffffffe8 72%,#fff 91%);pointer-events:none}
+.newcomer-copy,.campaign-offer{position:relative;z-index:1;margin-top:auto;background:transparent}
+.newcomer-copy{padding-top:55px}
+.campaign-offer{padding-top:55px}
+.campaign-close{z-index:2}
+
+/* 订阅页卡片外沿统一为18px；原图悬挂在展示区右上方 */
+.subscription-member-status{margin-left:18px;margin-right:18px;border-radius:13px;box-sizing:border-box}
+.showcase-original{position:absolute;z-index:3;right:15px;top:80px;width:58px;height:70px;margin:0;border:2px solid #fffffff0;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 3px 14px #17102030;pointer-events:none}
+.showcase-original[hidden]{display:none}
+.showcase-original img{width:100%;height:100%;display:block;object-fit:cover}
+.showcase-original figcaption{position:absolute;bottom:0;left:0;right:0;padding:3px 0;background:#21192d99;color:#fff;font-size:9px;line-height:1.2;text-align:center}
+
+/* 收紧订阅展示区标题，保留更多素材画面 */
+.subscription-hero-copy h1{font-size:20px;line-height:1.25;letter-spacing:.3px;margin:0 0 5px}
+
+.newcomer-media .newcomer-original{top:22px;right:18px;width:62px;height:76px;z-index:2}
+
+.newcomer-back{position:absolute;top:15px;left:16px;z-index:4;width:32px;height:32px;display:grid;place-items:center;border:0;border-radius:50%;background:#0003;color:#fff;backdrop-filter:blur(8px)}
+.newcomer-back svg{width:20px;height:20px}
+
+.subscription-title-count>span{font-size:9px;line-height:1.4;white-space:nowrap}
+
+/* 会员主张横幅：浅紫一体式排版，窄屏保持文字完整 */
+.subscription-heading{padding:0 18px 14px}
+.subscription-title-main{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:15px 16px;border:1px solid #ebe2ff;border-radius:15px;background:radial-gradient(ellipse at 95% 0%,#d9caff80,transparent 65%),linear-gradient(120deg,#faf7ff,#f0e9ff)}
+.subscription-title-main:after{content:"✦";position:absolute;z-index:-1;right:12px;top:0;font-size:105px;line-height:1;color:#b49ae824;transform:rotate(12deg);pointer-events:none}
+.subscription-heading h2{font-size:24px;line-height:1.2;letter-spacing:0;color:#3e285f}
+.subscription-heading h2 span{font-size:11px;letter-spacing:.4px;line-height:1.5;margin-top:6px;color:#857099}
+.subscription-title-count{display:flex;flex-direction:row;align-items:center;gap:7px;border:0;padding:0;min-width:0}
+.subscription-title-count em{font-size:32px;letter-spacing:-1.5px;line-height:1;font-style:normal}
+.subscription-title-count em>span{font-size:21px;vertical-align:top;line-height:1.2}
+.subscription-title-count>span{font-size:8px;line-height:1.65;margin:0;color:#79608f;white-space:nowrap;text-align:left}
+.newcomer-copy p{text-wrap:balance;overflow-wrap:normal;word-break:normal}
+.newcomer-subtitle-line{display:block;text-wrap:balance}
+@media(max-width:360px){.subscription-title-main{padding:13px 12px;gap:8px}.subscription-heading h2{font-size:21px}.subscription-heading h2 span{font-size:10px}.subscription-title-count{gap:5px}.subscription-title-count em{font-size:28px}.subscription-title-count>span{font-size:7.5px}}
+
+.newcomer-copy .primary,.campaign-offer>.primary{background:var(--sub-accent,#6950e8);color:#fff}
+
+/* Shared recharge badges for both full page and shortfall drawer. */
+.recharge-grid .pack{position:relative;overflow:visible;padding-top:23px}
+.recharge-grid .pack-badge{position:absolute;top:-1px;left:-1px;z-index:1;max-width:calc(100% + 2px);padding:3px 8px;border-radius:15px 0 9px 0;background:linear-gradient(120deg,#8c6cf2,#6554dc);color:#fff;font-size:10px;font-weight:700;line-height:15px;white-space:nowrap;pointer-events:none;box-shadow:0 3px 8px #6950e81a}
+/* 加赠额度使用暖橙促销色；推荐角标保留品牌紫。 */
+.recharge-grid .pack.has-bonus .pack-badge{background:linear-gradient(110deg,#f66b3e,#df412f);color:#fff;box-shadow:0 3px 8px #df412f24}
+
+
+/* Text-driven examples show source copy in the same upper-right area as original photos. */
+.showcase-source-text{position:absolute;z-index:3;top:80px;right:15px;width:124px;max-width:40%;padding:7px 8px;margin:0;border:1px solid #ffffff70;border-radius:11px;background:#21192d80;backdrop-filter:blur(10px);color:#fff;pointer-events:none;box-sizing:border-box}
+.showcase-source-text[hidden]{display:none}
+.showcase-source-text>span{display:inline-block;margin-bottom:3px;font-size:9px;font-weight:700;line-height:13px;color:#eee5ff}
+.showcase-source-text>p{margin:0;font-size:9px;line-height:1.6;text-align:left;overflow-wrap:anywhere}
+
+/* Only the weekly subscription SKU is offered. */
+.subscription-plans{grid-template-columns:minmax(0,1fr)}
+
+/* Weekly SKU: identity on the left, purchase price on the right. */
+.subscription-plans .weekly-plan,.subscription-plans .weekly-plan.selected{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;padding:10px 18px;border:1.5px solid #8063e9;border-radius:16px;background:linear-gradient(110deg,#f4efff,#fcfaff);text-align:left;box-shadow:0 5px 18px #6950e80a;gap:16px}
+.weekly-plan-info,.weekly-plan-pricing{display:flex;flex-direction:column;min-width:0}
+.weekly-plan-info{gap:5px}
+.weekly-plan-info>strong{font-size:22px;line-height:1.3;color:#38274f;font-weight:750}
+.weekly-plan-pricing{align-items:flex-start;gap:3px}
+.weekly-offer-label{position:absolute;top:-1px;left:-1px;z-index:1;font-size:11px;line-height:18px;letter-spacing:.3px;color:#fff;background:linear-gradient(110deg,#8a65ef,#6445d7);border-radius:15px 0 12px 0;padding:4px 12px;font-weight:750;box-shadow:0 3px 8px #7050d528}
+.weekly-price-line{display:flex;align-items:baseline;align-self:center;gap:3px;white-space:nowrap}
+.weekly-plan .subscription-plan-price{font-size:34px;line-height:1.15;letter-spacing:-1px;margin:0;color:#6141bf}
+.weekly-plan .subscription-plan-price small{font-size:17px;margin-right:2px}
+.weekly-plan .weekly-original-price{font-size:11px;line-height:16px;margin:0 0 0 4px;color:#a092b1}
+.weekly-price-meta{display:flex;align-items:baseline;justify-content:center;align-self:stretch;gap:8px;white-space:nowrap}
+.weekly-plan .weekly-price-meta del,.weekly-plan .plan-daily{font-size:9px;line-height:15px;margin:0;color:#a092b1}
+.weekly-plan .plan-radio{display:none}
+@media(max-width:360px){.subscription-plans .weekly-plan,.subscription-plans .weekly-plan.selected{padding:9px 14px;gap:10px}.weekly-plan .subscription-plan-price{font-size:30px}.weekly-plan-info>strong{font-size:20px}}
+
+/* Lift the PRO column above each comparison table. */
+.benefits-table-wrap{overflow:visible;margin-top:23px}
+.benefits-group table{border-collapse:separate;border-spacing:0}
+.benefits-group thead th:first-child{border-top-left-radius:14px}
+.benefits-group tbody tr:last-child th:first-child{border-bottom-left-radius:14px}
+.benefits-group tr>:last-child{background:#e9ddff;color:#6943b8;font-weight:600;border-left:1px solid #ddcdf8;border-right:1px solid #ddcdf8}
+.benefits-group thead th:last-child{position:relative;font-size:16px;color:#6034b3;font-weight:800}
+.benefits-group thead th:last-child::before{content:"";position:absolute;left:-1px;right:-1px;top:-15px;height:15px;border:1px solid #ddcdf8;border-bottom:0;border-radius:16px 16px 0 0;background:#e9ddff}
+.benefits-group tbody tr:last-child>:last-child{border-radius:0 0 14px 14px;border-bottom:1px solid #ddcdf8}
+.benefits-group thead th:last-child svg{width:18px;height:18px;vertical-align:-3px}
+
+/* Corner offer badge leaves the price column clear. */
+.weekly-plan-info{padding-top:12px}
+
+/* Compact two-row subscription offer, with a clear selected state. */
+.subscription-plans .weekly-plan,.subscription-plans .weekly-plan.selected{grid-template-columns:minmax(0,1fr) 25px;grid-template-rows:auto auto;column-gap:12px;row-gap:6px;padding:14px 18px;background:linear-gradient(110deg,#eee6ff,#f8f4ff)}
+.weekly-plan-info{grid-column:1;grid-row:1;flex-direction:row;align-items:center;gap:10px;padding-top:0}
+.weekly-plan-info>strong{font-size:17px;line-height:24px}
+.weekly-offer-label{position:static;border-radius:6px;padding:2px 8px;font-size:10px;line-height:17px;letter-spacing:0;box-shadow:none}
+.weekly-plan-pricing{grid-column:1;grid-row:2;flex-direction:row;align-items:baseline;gap:10px}
+.weekly-price-line{align-self:auto;gap:8px}
+.weekly-plan .subscription-plan-price{font-size:28px;line-height:32px}
+.weekly-plan .subscription-plan-price small{font-size:15px}
+.weekly-plan .weekly-original-price{margin:0;font-size:13px}
+.weekly-price-meta{align-self:auto}
+.weekly-plan .plan-daily{font-size:10px}
+.weekly-plan .plan-radio{display:flex;position:static;grid-column:2;grid-row:1 / 3;width:25px;height:25px;align-items:center;justify-content:center;border:0;background:#7050de;color:#fff;border-radius:50%}
+.weekly-plan .plan-radio svg{width:16px;height:16px}
+
+/* Original price sits quietly at the upper right of the introductory price. */
+.weekly-price-line{align-items:flex-start;gap:5px}
+.weekly-plan .weekly-original-price{font-size:10px;line-height:14px;margin:2px 0 0;color:#a397b3;font-weight:400}
+
+/* Keep original and daily prices together on a shared baseline. */
+.weekly-plan .weekly-price-meta{display:flex;align-items:baseline;gap:8px}
+.weekly-plan .weekly-price-meta .weekly-original-price{font-size:10px;line-height:15px;margin:0;color:#a397b3;font-weight:400}
+
+/* A light typographic heading keeps the subscription offer as the focal point. */
+.subscription-heading{padding:0 22px 14px}
+.subscription-title-main{padding:5px 0 12px;border:0;border-bottom:1px solid #eee9f6;border-radius:0;background:none;overflow:visible}
+.subscription-title-main:after{display:none}
+.subscription-heading h2{font-size:22px;color:#3e2b61;letter-spacing:.3px}
+.subscription-heading h2 span{font-size:10px;margin-top:5px;color:#9688a6;font-weight:500}
+.subscription-title-count{gap:6px}
+.subscription-title-count em{font-size:28px;background:linear-gradient(110deg,#9c83db,#7152ca);background-clip:text;-webkit-background-clip:text}
+.subscription-title-count em>span{font-size:18px}
+.subscription-title-count>span{font-size:8px;color:#998ba9;line-height:1.6}
+@media(max-width:360px){.subscription-heading{padding:0 18px 12px}.subscription-title-main{padding:5px 0 10px;gap:8px}.subscription-heading h2{font-size:20px}.subscription-title-count em{font-size:25px}}
+
+/* Keep the membership promise and feature count together as one heading. */
+.subscription-title-main{display:flex;justify-content:center;align-items:center;gap:22px}
+.subscription-heading h2{font-size:20px;line-height:1.25}
+.subscription-heading h2 span{font-size:16px;line-height:1.3;margin-top:3px;letter-spacing:0;color:#3e2b61;font-weight:700}
+.subscription-title-count{flex-shrink:0}
+@media(max-width:360px){.subscription-title-main{gap:16px}.subscription-heading h2{font-size:18px}.subscription-heading h2 span{font-size:15px}}
+
+.bind-title-row[hidden]{display:none}
+.subscription-heading h2 span{font-size:11px;font-weight:500;color:#9688a6;white-space:nowrap}
+
+/* Mixed avatar comments drift independently of the feature carousel. */
+.showcase-danmaku{position:absolute;left:0;right:0;top:46%;height:32px;z-index:2;overflow:hidden;pointer-events:none;user-select:none}
+.showcase-danmaku-item{position:absolute;top:0;left:100%;display:flex;align-items:center;gap:6px;width:max-content;padding:4px 10px 4px 4px;border:1px solid #ffffff24;border-radius:30px;background:#241a3f69;backdrop-filter:blur(5px);color:#fff;font-size:10px;line-height:20px;white-space:nowrap;opacity:0;animation:showcase-danmaku-drift 120s linear infinite;animation-delay:var(--danmaku-delay);text-shadow:0 1px 3px #0004}
+.showcase-danmaku-item img{width:22px;height:22px;flex-shrink:0;object-fit:cover;border:1px solid #ffffffb3;border-radius:50%}
+@keyframes showcase-danmaku-drift{0%{left:100%;transform:translateX(0);opacity:1}5.83%{left:0;transform:translateX(-100%);opacity:1}5.84%,100%{left:0;transform:translateX(-100%);opacity:0}}
+@media(prefers-reduced-motion:reduce){.showcase-danmaku-item{animation:none}.showcase-danmaku-item:first-child{left:12px;opacity:1;max-width:calc(100% - 24px)}.showcase-danmaku-item span{overflow:hidden;text-overflow:ellipsis}}
+
+/* Five-second cadence, staggered across three heights (爆款工坊 reference). */
+.showcase-danmaku{top:35%;height:104px}
+.showcase-danmaku-item{top:calc(var(--danmaku-lane) * 36px);animation-name:showcase-danmaku-three-lanes;animation-duration:75s}
+@keyframes showcase-danmaku-three-lanes{0%{left:100%;transform:translateX(0);opacity:1}10.66%{left:0;transform:translateX(-100%);opacity:1}10.67%,100%{left:0;transform:translateX(-100%);opacity:0}}
+@media(prefers-reduced-motion:reduce){.showcase-danmaku-item{animation:none}}
+
+/* Comments stay above source-image/text overlays, without intercepting gestures. */
+.showcase-danmaku{z-index:4}
+.showcase-danmaku-item{animation-name:showcase-danmaku-fast;animation-duration:67.5s}
+@keyframes showcase-danmaku-fast{0%{left:100%;transform:translateX(0);opacity:1}11.85%{left:0;transform:translateX(-100%);opacity:1}11.86%,100%{left:0;transform:translateX(-100%);opacity:0}}
+@media(prefers-reduced-motion:reduce){.showcase-danmaku-item{animation:none}}
+
+/* 新人流程 AI短剧：复用订阅页原文浮层，避开左侧返回入口。 */
+.newcomer-media .newcomer-source-text{top:22px;right:18px;z-index:3}
+
+/* 充值加赠：固定底部展示，豆子错峰循环上浮。 */
+.recharge-grid .pack,.recharge-drawer .recharge-grid .pack{height:124px;padding:24px 4px 34px;justify-content:flex-start;isolation:isolate}
+.recharge-grid .pack .pack-price{margin:10px 0 0;font-size:13px;line-height:18px}
+.recharge-grid .pack .pack-bonus{position:absolute;left:0;right:0;bottom:0;height:28px;margin:0;padding:0 7px;display:flex;align-items:center;justify-content:center;gap:5px;overflow:hidden;border-radius:0 0 15px 15px;background:#eee7fb;border-top:1px solid #e6dcf6;color:#7955d6;font-size:10px;line-height:1.2}
+.recharge-grid .pack.active .pack-bonus{background:#e5d9fc;border-top-color:#d8c7f6}
+.recharge-grid .pack .pack-bonus>.bonus-bean{width:15px;height:17px;display:inline-flex;margin:0;color:#9573e7;flex:none}
+.pack-bonus .bean svg{width:100%;height:100%}
+.pack-bubbles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.pack-bubbles .bubble{position:absolute;bottom:-15px;width:10px;height:12px;margin:0;color:#9673e7;opacity:0}
+.pack-bubbles .bubble-one{left:76%;--bubble-drift:-6px}
+.pack-bubbles .bubble-two{left:87%;--bubble-drift:5px}
+.pack-bubbles .bubble-three{left:66%;--bubble-drift:-3px}
+.has-bonus .bubble{animation:pack-bean-rise 2.8s ease-out infinite both}
+.has-bonus .bubble-two{animation-delay:.8s}
+.has-bonus .bubble-three{animation-delay:1.6s}
+@keyframes pack-bean-rise{0%{opacity:0;transform:translate(0,0) scale(.65)}20%{opacity:.8}100%{opacity:0;transform:translate(var(--bubble-drift),-42px) scale(.35)}}
+@media(prefers-reduced-motion:reduce){.has-bonus .bubble{animation:none}}
+
+/* 周会员优惠角标：暖色促销强调，与品牌紫区分。 */
+.weekly-plan .weekly-offer-label{background:linear-gradient(110deg,#f66b3e,#df412f);color:#fff;box-shadow:0 2px 6px #df412f24}
+
+/* 加赠信息融入卡片，不再以独立色带分区。 */
+.recharge-grid .pack .pack-bonus,
+.recharge-grid .pack.active .pack-bonus{background:transparent;border-top:0;font-weight:500}
+.recharge-grid .pack .pack-bonus>.bonus-bean{width:12px;height:14px;color:#9573e7}

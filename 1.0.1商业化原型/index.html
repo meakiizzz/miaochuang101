@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="妙创 1.0.1 商业化独立交互原型，会员、妙豆与生成业务流程演示。">
+  <title>妙创 · 1.0.1 商业化原型</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subscription.css">
+  <link rel="stylesheet" href="review-pages.css">
+</head>
+<body>
+  <aside class="review-sidebar">
+    <div class="project-brand"><span class="brand-symbol">✦</span><div><strong>妙创</strong><span>商业化交互原型</span></div><b>1.0.1</b></div>
+    <div class="scope-note">独立于 1.0.0 的本地版本<br>所有购买均为演示，不发起真实支付</div>
+    <div class="sidebar-section"><h2>从这里开始</h2>
+      <button data-scene="campaign" class="scene-button"><span>新</span><div><strong>非自然量新人流程</strong><small>4步介绍 → 专属订阅页</small></div></button>
+      <button data-scene="organic" class="scene-button"><span>新</span><div><strong>自然量新人流程</strong><small>4步介绍 → 端内同款订阅页</small></div></button>
+      <button data-scene="guest" class="scene-button"><span>01</span><div><strong>非会员开始创作</strong><small>订阅 → 绑定 → 继续原操作</small></div></button>
+      <button data-scene="writer" class="scene-button"><span>02</span><div><strong>AI 帮写拦截</strong><small>会员权益，不额外消耗妙豆</small></div></button>
+      <button data-scene="template" class="scene-button"><span>03</span><div><strong>模板做同款拦截</strong><small>开通后继续上传照片</small></div></button>
+      <button data-scene="insufficient" class="scene-button"><span>04</span><div><strong>妙豆不足</strong><small>充值后返回，手动再次生成</small></div></button>
+      <button data-scene="failure" class="scene-button"><span>05</span><div><strong>生成失败与退回</strong><small>原来源退回，重试新建任务</small></div></button>
+      <button data-scene="expired" class="scene-button"><span>06</span><div><strong>会员已到期</strong><small>充值妙豆保留，历史作品可用</small></div></button>
+      <button data-scene="unbound" class="scene-button"><span>07</span><div><strong>已付费，未绑定</strong><small>再操作时继续绑定</small></div></button>
+      <button data-scene="member" class="scene-button"><span>08</span><div><strong>有效会员</strong><small>妙豆 Banner、充值与明细</small></div></button>
+      <button data-scene="cancelled" class="scene-button"><span>09</span><div><strong>会员已取消续订</strong><small>当期有效，展示权益到期日期</small></div></button>
+    </div>
+    <div class="sidebar-section"><h2>页面直达</h2><div class="quick-links">
+      <button data-review-view="static-pages" aria-controls="static-pages-view">1.0.1静态页面</button>
+          <button data-review-view="requirements" aria-controls="requirements-view">1.0.1文字需求</button>
+      <button data-preview="subscribe">订阅页</button><button data-preview="recharge">妙豆充值</button>
+      <button data-preview="ledger">妙豆明细</button><button data-preview="rates">用量表</button>
+      <button data-preview="success-push">生成成功伪Push</button><button data-preview="bind">手机绑定</button><button data-preview="settings">设置</button>
+    </div></div>
+    <details class="demo-options"><summary>演示控制</summary>
+      <label class="control-check"><input id="demo-conflict" type="checkbox">绑定的手机号已有有效会员</label>
+      <label class="control-check"><input id="demo-fail" type="checkbox">下一个生成任务失败</label>
+      <label class="control-check"><input id="demo-submit-fail" type="checkbox">下次提交失败（不扣妙豆）</label>
+      <button data-control="expire">模拟会员到期</button><button data-control="renew">模拟当前套餐续费</button>
+      <button data-control="cancel-renew">取消自动续费（保留当期）</button>
+      <button data-control="week-history">模拟曾购买周会员</button>
+      <button data-control="refund">模拟会员订单退款</button><button data-control="packrefund">模拟妙豆包退款</button>
+      <button data-control="reset">重置全部演示</button>
+    </details>
+    <div class="pending-note">周会员：首周¥9.9，之后¥68/周，赠600妙豆。人数为模拟动效：5,668起，每2秒增加1–3位，上限7,188；展示素材为占位。生成暂为400妙豆/次。</div>
+  </aside>
+  <main class="review-main" data-review-view="prototype">
+    <section id="static-pages-view" class="static-pages-view" aria-label="1.0.1静态页面总览" hidden></section>
+      <section id="requirements-view" class="requirements-view" aria-label="1.0.1文字需求" hidden>
+      <div class="requirements-view-toolbar"><strong>1.0.1 · 文字需求</strong><button data-review-view="prototype">返回交互原型</button></div>
+      <iframe src="requirements.html" title="妙创1.0.1迭代文字需求"></iframe>
+    </section>
+    <div class="base-page-picker"><label>页面预览 <select id="content-page-select"><option>加载页面…</option></select></label></div><div class="review-heading"><div><span class="version-tag">1.0.1 / COMMERCIAL</span><h1 id="scene-name">非会员开始创作</h1><p id="scene-desc">可以先编辑内容；点击 AI 帮写或开始创作时判断会员。</p></div><button class="reset-button" data-control="reset">重置体验</button></div>
+    <div class="stage">
+      <section class="phone" aria-label="妙创手机原型">
+        <div class="statusbar"><b>9:41</b><div class="status-icons"><span>▂▄▆</span><span>◔</span><span class="battery"></span></div></div>
+        <div id="app" class="app"></div>
+        <div id="layers" class="layers"></div>
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
+        <div class="home-indicator"></div>
+        <iframe id="content-base" src="base.html" sandbox="allow-scripts" title="1.0.0 最新页面与 1.0.1 会员入口"></iframe>
+      </section>
+      <aside class="flow-panel">
+        <div class="flow-panel-top"><span class="live-dot"></span>当前状态</div>
+        <div id="state-summary" class="state-summary"></div>
+        <h2>本次操作路径</h2><ol id="flow-events" class="flow-events"></ol>
+        <div class="flow-principle"><strong>先资格，再绑定，后扣豆</strong><p>订阅成功会继续原操作；充值成功返回原页，由用户再次点击生成。</p></div>
+        <div class="flow-principle"><strong>生成在「我的」继续</strong><p>提交时扣豆，失败按原来源退回；不单独设置生成 Loading 页。</p></div>
+      </aside>
+    </div>
+  </main>
+  <script src="subscription-media.js"></script>
+  <script src="app.js"></script>
+  <script src="static-pages.js"></script>
+  <script src="review-pages.js"></script>
+</body>
+</html>
