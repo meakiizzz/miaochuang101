@@ -2564,6 +2564,13 @@ const notify100=notify;notify=function(w){
 window.addEventListener('message',event=>{
  if(event.source!==parent||event.data?.channel!=='miaochuang101')return;
  const m=event.data;
+ if(m.action==='static-banner'){
+  commerce={...commerce,member:!!m.member,bound:false,balance:m.member?600:0};
+  state.logged=false;preview('mine');
+  document.body.replaceChildren(root);
+  const style=document.createElement('style');style.textContent='html,body{margin:0!important;padding:0!important;width:390px!important;height:844px!important;overflow:hidden!important;background:white!important}#aigc-app-preview{margin:0!important;padding:0!important;width:390px!important;max-width:none!important}#aigc-app-preview .device{margin:0!important;width:390px!important;height:844px!important;border:0!important;border-radius:0!important;box-shadow:none!important}#aigc-app-preview #aigc-view{pointer-events:none!important}#aigc-app-preview .commerce-mine-banner{pointer-events:none!important}#aigc-app-preview .toolbar,#aigc-app-preview .sidebar{display:none!important}*,*:before,*:after{animation:none!important;transition:none!important}';document.head.append(style);
+  return;
+ }
  if(m.action==='state'){commerce=m.commerce;state.logged=!!commerce.bound;state.boundPhoneMasked=commerce.phone||'';render();}
  if(m.action==='grant'){const callback=commerceCallbacks.get(m.token);commerceCallbacks.delete(m.token);callback?.(m.fail);}
  if(m.action==='deny'){commerceCallbacks.delete(m.token);if(m.message)toast(m.message);}

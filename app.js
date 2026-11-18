@@ -1129,7 +1129,7 @@
       drafts={};subscriptionFeature='sales';
       const add=(id,group,title,note,render,extra={})=>{
         route={page:id,...extra};
-        pages.push({id,group,title,note,html:render()});
+        pages.push({id,group,title,note,html:render(),...(id.startsWith('member-banner-')?{baseBanner:true,member:state.member}:{})});
       };
       for(let step=0;step<4;step++)add('newcomer-'+step,'新人流程',`新人引导 ${step+1} · ${newcomerSlides[step].title}`,'自然量与非自然量共用引导；第2—4页支持返回。',newcomerPage,{step});
       add('campaign-subscribe','新人流程','非自然量 · 订阅页','新人引导结束后的独立订阅样式。',campaignSubscription);
@@ -1145,8 +1145,11 @@
           `共${prompts.tags.length}个互斥词条，单排左右滑动；示例选中「${prompts.tags[0]}」，文本框展示详细叙述。`,
           ()=>editor(type,prompts),{type});
       }
+      const bannerPreview=()=>`<section class="page">${top('我的 · Banner状态')}<div class="scroll"><div class="content">${memberBanner()}</div></div></section>`;
+      add('member-banner-guest','会员Banner','我的 · 未开通会员','完整展示我的页面：登录区、会员开通Banner、作品分类、保存提示及作品空状态。',bannerPreview);
       add('recharge-guest','妙豆','妙豆充值 · 非会员','不展示充值SKU与明细入口。',recharge);
       state.member=true;state.bound=true;state.weekPurchased=true;state.gift=600;state.memberUntil=Date.now()+7*86400000;
+      add('member-banner-active','会员Banner','我的 · 已开通会员','完整展示我的页面：登录区、PRO妙豆余额600、去充值、作品分类、保存提示及作品空状态。',bannerPreview);
       add('subscribe-active','订阅与权益','订阅页 · 续订中','仅展示当前订阅；隐藏购买SKU、营销标题和购买底栏。',subscribe);
       state.autoRenew=false;
       add('subscribe-cancelled','订阅与权益','订阅页 · 已取消续订','当期权益仍有效，展示会员权益到期日期。',subscribe);

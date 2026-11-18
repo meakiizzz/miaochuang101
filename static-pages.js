@@ -12,6 +12,12 @@
     }).join('');
     return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=390"><base href="${escape(base)}">${styles}<style>html,body{margin:0;padding:0;width:390px;height:844px;min-width:0;overflow:hidden;background:white}.phone{margin:0!important;width:390px!important;height:844px!important;border:0!important;border-radius:0!important;box-shadow:none!important}.app{position:relative}.app>.layers{inset:0}*,*::before,*::after{animation:none!important;transition:none!important}button,input,textarea{cursor:default}.statusbar{background:#fff!important;color:#292436!important}.home-indicator{background:#292436!important}.scroll{scroll-behavior:auto!important}</style></head><body><section class="phone"><div class="statusbar"><strong>9:41</strong><span>▂▄▆ ◔ ▰</span></div><div class="app">${page.html}</div><div class="home-indicator"></div></section></body></html>`;
   }
+  function fillFrame(frame,page){
+    if(!page.baseBanner){frame.srcdoc=documentFor(page);return;}
+    frame.setAttribute('sandbox','allow-same-origin allow-scripts');
+    frame.addEventListener('load',()=>frame.contentWindow.postMessage({channel:'miaochuang101',action:'static-banner',member:page.member},'*'),{once:true});
+    frame.src=new URL('base.html',location.href).href;
+  }
   window.mountStaticPages=()=>{
     if(initialized)return;
     const pages=window.commercialDemo.staticPages();
@@ -21,14 +27,14 @@
     pages.forEach((page,index)=>{
       const card=document.createElement('article');card.className='static-page-card';card.dataset.group=page.group;
       card.innerHTML=`<div class="static-card-heading"><small>${String(index+1).padStart(2,'0')} / ${escape(page.group)}</small><h2>${escape(page.title)}</h2><p>${escape(page.note)}</p><button type="button" data-static-expand="${index}">放大查看 ↗</button></div><div class="static-phone-space"><iframe loading="lazy" sandbox="allow-same-origin" title="${escape(page.title)}静态预览"></iframe></div>`;
-      card.querySelector('iframe').srcdoc=documentFor(page);grid.append(card);
+      fillFrame(card.querySelector('iframe'),page);grid.append(card);
     });
     const dialog=host.querySelector('dialog');
     host.addEventListener('click',event=>{
       const filter=event.target.closest('[data-static-filter]');
       if(filter){host.querySelectorAll('[data-static-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===filter)));grid.querySelectorAll('article').forEach(c=>c.hidden=filter.dataset.staticFilter!=='全部'&&c.dataset.group!==filter.dataset.staticFilter);}
       const expand=event.target.closest('[data-static-expand]');
-      if(expand){const page=pages[Number(expand.dataset.staticExpand)];dialog.querySelector('strong').textContent=page.title;const iframe=document.createElement('iframe');iframe.setAttribute('sandbox','allow-same-origin');iframe.title=page.title;iframe.srcdoc=documentFor(page);dialog.querySelector('.static-expanded-frame').replaceChildren(iframe);dialog.showModal();}
+      if(expand){const page=pages[Number(expand.dataset.staticExpand)];dialog.querySelector('strong').textContent=page.title;const iframe=document.createElement('iframe');iframe.setAttribute('sandbox','allow-same-origin');iframe.title=page.title;fillFrame(iframe,page);dialog.querySelector('.static-expanded-frame').replaceChildren(iframe);dialog.showModal();}
       if(event.target.closest('[data-static-close]'))dialog.close();
     });
     dialog.addEventListener('close',()=>dialog.querySelector('.static-expanded-frame').replaceChildren());
